@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Detail Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="title">
+        <header class="card__header">
+          <p class="eyebrow">Task 4</p>
+          <h1 id="title">Student Detail Form</h1>
+          <p class="subtitle">Submit locally and see details instantly.</p>
+        </header>
+
+        <form class="form" id="studentForm" novalidate>
+          <label class="field">
+            <span>Full name</span>
+            <input type="text" id="name" name="name" required />
+          </label>
+
+          <label class="field">
+            <span>Roll number</span>
+            <input type="text" id="roll" name="roll" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="email" name="email" required />
+          </label>
+
+          <label class="field">
+            <span>Department</span>
+            <input type="text" id="department" name="department" required />
+          </label>
+
+          <label class="field">
+            <span>Year</span>
+            <select id="year" name="year" required>
+              <option value="">Select year</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+            </select>
+          </label>
+
+          <button class="btn" type="submit">Show Details</button>
+        </form>
+
+        <section class="result" id="result" hidden>
+          <h2 class="result__title">Student Details</h2>
+          <dl class="result__list">
+            <div>
+              <dt>Name</dt>
+              <dd id="outName"></dd>
+            </div>
+            <div>
+              <dt>Roll</dt>
+              <dd id="outRoll"></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd id="outEmail"></dd>
+            </div>
+            <div>
+              <dt>Department</dt>
+              <dd id="outDepartment"></dd>
+            </div>
+            <div>
+              <dt>Year</dt>
+              <dd id="outYear"></dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

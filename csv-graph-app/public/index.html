@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Graph Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>CSV Graph Generator</h1>
+        <p class="lead">Upload a CSV file and receive a generated graph image.</p>
+
+        <form id="uploadForm" class="form" novalidate>
+          <label class="field">
+            <span>CSV file</span>
+            <input type="file" name="csv" accept=".csv" required />
+          </label>
+          <button class="btn" type="submit">Upload & Generate</button>
+        </form>
+
+        <p class="message" id="message"></p>
+        <div class="preview" id="preview" hidden>
+          <h2>Generated Graph</h2>
+          <img id="graphImage" alt="Generated graph" />
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

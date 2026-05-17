@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silly Story Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="title">
+        <div class="card__header">
+          <p class="eyebrow">Playful Generator</p>
+          <h1 id="title">Silly Story Generator</h1>
+          <p class="subtitle">Click the button for a fresh random story.</p>
+        </div>
+
+        <form class="controls" id="controls" novalidate>
+          <label class="field">
+            <span>Enter custom name</span>
+            <input type="text" id="customName" placeholder="e.g. Maya" />
+          </label>
+
+          <fieldset class="toggle">
+            <legend>Choose measurement system</legend>
+            <label class="radio">
+              <input type="radio" name="units" value="us" checked />
+              <span>US</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="units" value="uk" />
+              <span>UK</span>
+            </label>
+          </fieldset>
+
+          <button class="btn" type="button" id="generate">
+            Generate random story
+          </button>
+        </form>
+
+        <section class="output" aria-live="polite">
+          <h2 class="output__label">Your story</h2>
+          <p class="story" id="story">Press the button to get started.</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
